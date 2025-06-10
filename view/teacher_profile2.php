@@ -47,13 +47,20 @@ $sql="SELECT * FROM teacher WHERE index_number='$index'";
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_assoc($result);
 
-$full_name=$row['full_name'];
-$i_name=$row['i_name'];
-$gender=$row['gender'];
-$address=$row['address'];
-$phone=$row['phone'];
-$email=$row['email'];
-$image=$row['image_name'];
+$full_name=(isset($row) && isset($row['full_name'])) ? $row['full_name'] : '';
+$i_name=(isset($row) && isset($row['i_name'])) ? $row['i_name'] : '';
+$gender=(isset($row) && isset($row['gender'])) ? $row['gender'] :'';
+$address=(isset($row) && isset($row['address'])) ? $row['address'] : '';
+$phone=(isset($row) && isset($row['phone'])) ? $row['phone'] : '';
+$email=(isset($row) && isset($row['email'])) ? $row['email'] : '';
+$image=(isset($row) && isset($row['image_name'])) ? $row['image_name'] : '';
+// $full_name=$row['full_name'];
+// $i_name=$row['i_name'];
+// $gender=$row['gender'];
+// $address=$row['address'];
+// $phone=$row['phone'];
+// $email=$row['email'];
+// $image=$row['image_name'];
 
 ?>
     

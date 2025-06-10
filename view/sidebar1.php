@@ -64,7 +64,6 @@ $image=$row['image_name'];
             <li><a href="all_subject1.php"><i class="fa fa-circle-o"></i> All Subject</a></li>
           </ul>
         </li>
-         
          <li class="treeview">
           <a href="#">
             <i class="fa fa-calendar-plus-o"></i>

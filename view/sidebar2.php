@@ -11,8 +11,8 @@ $index=$_SESSION["index_number"];
 $sql="SELECT * FROM teacher WHERE index_number='$index'";
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_assoc($result);
-$name=$row['i_name'];
-$image=$row['image_name'];
+$name = (isset($row) && isset($row['i_name'])) ? $row['i_name'] : '';
+$image = (isset($row) && isset($row['image_name'])) ? $row['image_name'] : '';
 
 ?>      
       

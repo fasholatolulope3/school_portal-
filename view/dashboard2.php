@@ -164,8 +164,8 @@ $my_index= $_SESSION["index_number"];
 $sql="SELECT * FROM teacher WHERE index_number='$my_index'";
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_assoc($result);
-$name=$row['i_name'];
-$id=$row['id'];
+$name= isset($row) && isset($row['i_name']) ? $row['i_name'] : '';
+$name= isset($row) && isset($row['id']) ? $row['id'] : '';
 
 ?>    
     

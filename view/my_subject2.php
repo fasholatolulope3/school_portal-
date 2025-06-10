@@ -107,7 +107,8 @@ $index=$_SESSION["index_number"];
 $sql1="SELECT * FROM teacher WHERE index_number='$index'";
 $result1=mysqli_query($conn,$sql1);
 $row1=mysqli_fetch_assoc($result1);
-$id=$row1['id'];
+$id = (isset($row1) && isset($row1['id'])) ? $row1['id'] : '';
+
 
 $sql="select grade.name as g_name,subject.name as s_name,subject_routing.id as sr_id,subject_routing.fee as s_fee
 	  from subject_routing
