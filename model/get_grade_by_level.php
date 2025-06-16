@@ -10,9 +10,6 @@ while($row=mysqli_fetch_assoc($result)){
     array_push($grade, $gra);
 }
 echo json_encode($grade);//MSK-00106
-
-
-
 ?>	
 
 
